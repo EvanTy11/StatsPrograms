@@ -25,11 +25,10 @@ this.proboffailure = proboffailure;
         n2 = Factorial(n - r);
         n3 = Factorial(r);
         answer1 = n1/ (n2 * n3);
-        System.out.println(answer1);
         return answer1;
        
     }
-    
+
     public void doBinomial(){
       double comb = Combination(trials, success);
       double answer = comb * ((Math.pow(probofsucc, 2)) * (Math.pow(proboffailure, 2)));
