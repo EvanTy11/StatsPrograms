@@ -6,7 +6,7 @@ final double p, n;
         this.n = n;
         this.p = p;
     }
-
+    //Calculates geometricmean
     public void doGeometric(){
         final double r = Math.pow(1.0-p, n-1) * p;
     

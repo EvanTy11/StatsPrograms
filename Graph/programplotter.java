@@ -15,7 +15,7 @@ public class programplotter{
     ArrayList<String> saltvalsS;
     public String line =  "";
     String filename = "graph.csv";
-
+    //constructor
     public programplotter(){
      xval = new ArrayList<Integer>();
      yval = new ArrayList<Integer>();

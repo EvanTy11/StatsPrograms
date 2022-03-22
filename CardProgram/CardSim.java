@@ -43,7 +43,13 @@ public void pokerhandCalc( ){
 					}
 				}
 			}
+            //Draws one card
+            public void drawCard(){
+                Random rand1 = new Random();
+                int drawran = rand1.nextInt(list.size());
+                System.out.println( "Card" + list.get(drawran).getSuite() + list.get(drawran).getNumber());
 
+            }
     //Shuffles the deck of 52 cards so cards are in random positions 
     public void shuffle(){
         shuffled.clear();
@@ -59,7 +65,7 @@ public void pokerhandCalc( ){
            shuffled.add(new Card(suiteshuf,numshuf));
         }
     }
-
+    //Draws five random cards
 	public void fiveRandomCards(){
         Random rand = new Random();
         int ranNum;
@@ -95,7 +101,7 @@ public void pokerhandCalc( ){
       
 
 			}
-    
+    //Checks for certain hands
     public void isPair(){
         ArrayList<Card> test = new ArrayList<Card>();
         test.add(new Card("Spades",11));
@@ -137,7 +143,7 @@ public void pokerhandCalc( ){
           }
         }
       }
-
+      //checks for a straight
     public void isStraight(){
        
         int Straight = 0;
@@ -160,7 +166,7 @@ public void pokerhandCalc( ){
         }
 
     }
-
+    //checks for a flush
     public void isFlush(){
        
         int Flush = 0;
@@ -181,9 +187,10 @@ public void pokerhandCalc( ){
         }
 
     }
+    //Prints out stats of hands
     public void Stats(){
             
-System.out.println("Percentage of One Pairs"+ onepsucc * 100/ trials+"%" +"\nPercentage of two pairs" + twopsucc * 100 /trials+"%"+"\nPercentage of three of a kind"+ toksucc * 100 /trials +"%"+"\nPercentage of Full houses"+ fhsucc * 100 /trials +"\nPercentage of four of a kind" + foaksucc * 100 /trials +"\nPercentage of straight" +straightsucc * 100 /trials + "\nPercentage of flush"+ flushsucc * 100 /trials);
+System.out.println("Percentage of One Pairs"+ onepsucc * 100/ trials+"%" +"\nPercentage of two pairs" + twopsucc * 100 /trials+"%"+"\nPercentage of three of a kind"+ toksucc * 100 /trials +"%"+"\nPercentage of Full houses"+ fhsucc * 100 /trials +"\nPercentage of four of a kind" + foaksucc * 100 /trials+ "%" +"\nPercentage of straight" +straightsucc * 100 /trials+"%" + "\nPercentage of flush"+ flushsucc * 100 /trials+"%");
     }
 
     }
