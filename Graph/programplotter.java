@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
 
-
+//programplotter class
 public class programplotter{
     String filename1 = "SaltedGraph.csv";
     String filename2 = "SmoothedGraph.csv";

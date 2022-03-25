@@ -103,12 +103,6 @@ public void pokerhandCalc( ){
 			}
     //Checks for certain hands
     public void isPair(){
-        ArrayList<Card> test = new ArrayList<Card>();
-        test.add(new Card("Spades",11));
-        test.add(new Card("Spades",11));
-        test.add(new Card("Spades",11));
-        test.add(new Card("Spades",11));
-        test.add(new Card("Spades",1));
         int pair = 0;
         for (int i = 0; i < fivecards.size()-1; i++) {
              for (int j = i+1; j < fivecards.size(); j++) {
