@@ -19,13 +19,14 @@ public class jfreewoldcode extends ApplicationFrame {
    public jfreewoldcode( String applicationTitle , String chartTitle, int uservals) {
       super(applicationTitle);
       this.userval = uservals;
+      //Creates XYSeries
       JFreeChart lineChart = ChartFactory.createXYLineChart(
          chartTitle,
          "xvals","yvals",
          createDataset(),
          PlotOrientation.VERTICAL,
          true,true,false);
-         
+        //Creates panel
       ChartPanel chartPanel = new ChartPanel(lineChart);
       chartPanel.setPreferredSize( new java.awt.Dimension( 500 , 500 ) );
       setContentPane( chartPanel );

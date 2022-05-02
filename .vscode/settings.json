@@ -1,9 +1,9 @@
 {
     "java.project.sourcePaths": [
-        "StatsLibrary",
         "Project2/CardProgram",
         "Project 3/StatsLibrary",
-        "Project 3/Programs/src"
+        "Project 3/Programs/src",
+        "Project 3/JFree&mathcommons/src"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",

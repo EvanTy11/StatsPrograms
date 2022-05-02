@@ -1,3 +1,4 @@
+//import statements
 import org.jfree.chart.ChartPanel; 
 import org.jfree.chart.JFreeChart; 
 import org.jfree.data.xy.XYDataset; 
@@ -10,34 +11,37 @@ import org.apache.commons.math3.random.JDKRandomGenerator;
 import org.apache.commons.math3.analysis.function.Multiply;
 import org.apache.commons.math3.stat.descriptive.moment.Mean;
 
-
+//Class
 public class jfreecommons extends ApplicationFrame {
-   
-   public jfreecommons( String applicationTitle , String chartTitle ) {
-      super(applicationTitle);
-      //Creates our chart
-      JFreeChart lineChart = ChartFactory.createXYLineChart(
-         chartTitle,
-         "xvals","yvals",
-         createDataset(),
-         PlotOrientation.VERTICAL,
-         true,true,false);
-      //Created our panel
-      ChartPanel chartPanel = new ChartPanel( lineChart );
-      chartPanel.setPreferredSize( new java.awt.Dimension( 500 , 500 ) );
-      setContentPane( chartPanel );
-
-   }
-
+  int userval; 
+  //constructor
+    public jfreecommons( String applicationTitle , String chartTitle, int uservals) {
+        super(applicationTitle);
+        this.userval = uservals;
+        //Creates XYSeries
+        JFreeChart lineChart = ChartFactory.createXYLineChart(
+           chartTitle,
+           "xvals","yvals",
+           createDataset(),
+           PlotOrientation.VERTICAL,
+           true,true,false);
+           //Creates panel
+        ChartPanel chartPanel = new ChartPanel(lineChart);
+        chartPanel.setPreferredSize( new java.awt.Dimension( 500 , 500 ) );
+        setContentPane( chartPanel );
+     }
+    /*Function name that creates our data set and creates values for our x array and then generates values 
+    for our y array and then salts and smooths the data this is done using w
+    a combination of JFree charts and apache commons which we construct and use a XYSeries to add data too and graph each individually.Then returns
+    the dataset 
+    */
    private XYDataset createDataset() {
     final XYSeries reggraph = new XYSeries("lineargraph");
     JDKRandomGenerator randomnum = new JDKRandomGenerator();
     double genx;
-    int userval = 150;
     Double[] xval = new Double[userval];
     for (int i = 0; i < userval; i++){
       genx  = randomnum.nextDouble(1.0, 10.0);
-     
       xval[i] = genx;
     }
 
