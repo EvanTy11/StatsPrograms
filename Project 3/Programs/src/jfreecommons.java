@@ -34,14 +34,6 @@ public class jfreecommons extends ApplicationFrame {
     final XYSeries reggraph = new XYSeries("lineargraph");
     JDKRandomGenerator randomnum = new JDKRandomGenerator();
     double genx;
-    Mean m2 = new Mean();
-    m2.increment(2.0);
-    m2.increment(1.0);
-    System.out.print(m2.getResult());
-    m2.clear();
-    m2.increment(2.0);
-    m2.increment(3.0);
-    System.out.print(m2.getResult());
     int userval = 100;
     Double[] xval = new Double[userval];
     for (int i = 0; i < userval; i++){
