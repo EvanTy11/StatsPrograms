@@ -13,6 +13,7 @@ public class jfreetester {
         RefineryUtilities.centerFrameOnScreen( chart1 );
         chart1.setVisible( true );
         //creates the chart2 object which is passed values for the parameters which also helps in determining window size and showing the window
+        
         jfreecommons chart2 = new jfreecommons(
             "regraph/salter/smoother/apache" ,
             "Graphs");
