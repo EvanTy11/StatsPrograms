@@ -1,4 +1,4 @@
-package StatsLibrary;
+
 //Poisson Class
 public class Poisson {
 double lambda, k;

@@ -1,4 +1,4 @@
-package StatsLibrary;
+
 //Class
 public class binomial {
     double x, n, probofsucc, proboffailure;

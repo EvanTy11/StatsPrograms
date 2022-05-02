@@ -1,4 +1,4 @@
-package StatsLibrary;
+
 //Tester Class
 public class geometrictester {
   //Main Method

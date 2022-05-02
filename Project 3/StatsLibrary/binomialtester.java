@@ -1,4 +1,4 @@
-package StatsLibrary;
+
 //Tester CLass
 public class binomialtester {
   //Main Method

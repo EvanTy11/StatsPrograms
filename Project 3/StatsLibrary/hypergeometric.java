@@ -1,4 +1,4 @@
-package StatsLibrary;
+
 
 public class hypergeometric {
      double Popsize, samplesize, numofsucc, numofsuccchosen;
