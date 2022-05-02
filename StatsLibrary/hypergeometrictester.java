@@ -1,4 +1,4 @@
-package Distributions;
+package StatsLibrary;
 
 public class hypergeometrictester {
  

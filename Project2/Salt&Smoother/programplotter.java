@@ -1,4 +1,4 @@
-package Graph;
+package Project2;
 import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package Distributions;
+package StatsLibrary;
 //Geometric Class
 public class geometric{
 final double p, n;

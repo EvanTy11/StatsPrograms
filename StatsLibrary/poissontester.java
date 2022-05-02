@@ -1,4 +1,4 @@
-package Distributions;
+package StatsLibrary;
 //Tester class
 public class poissontester {
     //Main Method

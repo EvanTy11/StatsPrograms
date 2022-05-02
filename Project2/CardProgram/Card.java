@@ -1,4 +1,4 @@
-package CardProgram;
+package Project2.CardProgram;
 
 public class Card {
 int number;

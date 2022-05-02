@@ -1,4 +1,4 @@
-package CardProgram;
+package Project2.CardProgram;
 //Worked on this project with Ruth Wittek and John Huges in class
 
 import java.util.ArrayList;

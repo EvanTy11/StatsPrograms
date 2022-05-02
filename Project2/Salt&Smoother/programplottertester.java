@@ -1,4 +1,4 @@
-package Graph;
+package Project2;
 public class programplottertester{
 
     public static void main(String args[]){
