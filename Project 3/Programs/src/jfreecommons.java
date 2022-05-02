@@ -8,7 +8,6 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeriesCollection; 
 import org.apache.commons.math3.random.JDKRandomGenerator;
 import org.apache.commons.math3.analysis.function.Multiply;
-import java.util.Arrays;
 import org.apache.commons.math3.stat.descriptive.moment.Mean;
 
 
@@ -34,7 +33,7 @@ public class jfreecommons extends ApplicationFrame {
     final XYSeries reggraph = new XYSeries("lineargraph");
     JDKRandomGenerator randomnum = new JDKRandomGenerator();
     double genx;
-    int userval = 100;
+    int userval = 150;
     Double[] xval = new Double[userval];
     for (int i = 0; i < userval; i++){
       genx  = randomnum.nextDouble(1.0, 10.0);
