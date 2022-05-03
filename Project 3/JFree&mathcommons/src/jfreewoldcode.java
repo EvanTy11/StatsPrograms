@@ -30,6 +30,7 @@ public class jfreewoldcode extends ApplicationFrame {
       ChartPanel chartPanel = new ChartPanel(lineChart);
       chartPanel.setPreferredSize( new java.awt.Dimension( 500 , 500 ) );
       setContentPane( chartPanel );
+     
    }
 /*Function name that creates our data set and creates values for our x array and then generates values 
 for our y array and then salts and smooths the data this is done using my old code from project 2 with 
@@ -54,14 +55,14 @@ the dataset
    
     final XYSeries salteddata = new XYSeries("Salted");
 
- 
+    int newval = 0;
     for(int i = 0; i < yval.size(); i++){
-         int newval = yval.get(i);
+        
         if(i + 1 % 2 == 0){
-             newval = newval - rand.nextInt(15) + 1;
+             newval = yval.get(i) - rand.nextInt(15) + 1;
              yval.set(i, newval);
         }else{
-            newval = newval + rand.nextInt(15) + 1;
+            newval = yval.get(i) + rand.nextInt(15) + 1;
             yval.set(i, newval);
         }
         salteddata.add(xval.get(i), yval.get(i));

@@ -19,14 +19,15 @@ public class jfreecommons extends ApplicationFrame {
         super(applicationTitle);
         this.userval = uservals;
         //Creates XYSeries
-        JFreeChart lineChart = ChartFactory.createXYLineChart(
+        JFreeChart lineChartco = ChartFactory.createXYLineChart(
            chartTitle,
            "xvals","yvals",
            createDataset(),
            PlotOrientation.VERTICAL,
            true,true,false);
+        
            //Creates panel
-        ChartPanel chartPanel = new ChartPanel(lineChart);
+        ChartPanel chartPanel = new ChartPanel(lineChartco);
         chartPanel.setPreferredSize( new java.awt.Dimension( 500 , 500 ) );
         setContentPane( chartPanel );
      }
@@ -40,9 +41,11 @@ public class jfreecommons extends ApplicationFrame {
     JDKRandomGenerator randomnum = new JDKRandomGenerator();
     double genx;
     Double[] xval = new Double[userval];
+    
     for (int i = 0; i < userval; i++){
       genx  = randomnum.nextDouble(1.0, 10.0);
       xval[i] = genx;
+      System.out.print(xval[i]);
     }
 
     double yvalgen;
@@ -52,25 +55,24 @@ public class jfreecommons extends ApplicationFrame {
 
         yvalgen = (m.value(2,(xval[i] + 3)));
         yval[i] = yvalgen;
-        reggraph.add( xval[i], yval[i] );
+        reggraph.add(xval[i], yval[i]);
     }
     
   
     final XYSeries salteddata = new XYSeries("Salted");
     boolean flag = true;
+    double newval = 0;
     for(int i = 0; i < yval.length; i++){
       
-         double newval = yval[i];
         if(flag){
-             newval = newval - randomnum.nextDouble(1.0, 15.0);
+             newval = yval[i] - randomnum.nextDouble(1.0, 15.0);
              yval[i] = newval;
              flag = false;
         }else{
-            newval = newval + randomnum.nextDouble(1.0, 15.0);
+            newval = yval[i] + randomnum.nextDouble(1.0, 15.0);
             yval[i] = newval;
             flag = true;
         }
-        System.out.print(newval);
         salteddata.add(xval[i], yval[i]);
     }
    
@@ -79,17 +81,13 @@ public class jfreecommons extends ApplicationFrame {
    Mean m1 = new Mean();
    Double[] mean = new Double[userval - 2];
     for(int i = 0; i < yval.length - 2; i++){
-     
         m1.increment(yval[i]);
         m1.increment(yval[i + 1]);
         m1.increment(yval[i + 2]);
         mean[i] = m1.getResult();
-        System.out.print(mean[i]);
         m1.clear();
-       smoothed.add( xval[i], mean[i]);
+        smoothed.add( xval[i], mean[i]);
     }
-   
-   
    
     final XYSeriesCollection dataset = new XYSeriesCollection();
     dataset.addSeries(reggraph);

@@ -10,7 +10,7 @@ public class jfreetester {
            "Graphs",100);
       
         chart1.pack( );
-        RefineryUtilities.centerFrameOnScreen( chart1 );
+        RefineryUtilities.centerFrameOnScreen(chart1);
         chart1.setVisible( true );
         
         //creates the chart2 object which is passed values for the parameters which also helps in determining window size and showing the window
