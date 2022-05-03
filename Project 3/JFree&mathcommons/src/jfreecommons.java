@@ -45,7 +45,7 @@ public class jfreecommons extends ApplicationFrame {
     for (int i = 0; i < userval; i++){
       genx  = randomnum.nextDouble(1.0, 10.0);
       xval[i] = genx;
-      System.out.print(xval[i]);
+     
     }
 
     double yvalgen;
